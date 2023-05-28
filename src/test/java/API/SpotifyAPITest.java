@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 
 
-class SpotifyAPITest {
+public class SpotifyAPITest {
     @Test
     void testGetArtistImage() {
         String url = null;

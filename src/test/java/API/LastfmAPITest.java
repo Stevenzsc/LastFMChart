@@ -2,7 +2,7 @@ package API;
 
 import org.junit.jupiter.api.Test;
 
-class LastfmAPITest {
+public class LastfmAPITest {
 
     @Test
     public void testGetArtistImageURL() throws Exception {
