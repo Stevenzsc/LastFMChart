@@ -38,6 +38,7 @@ public class LastFmExcel {
     private static final String CACHE_FILE = "artistImageCache.ser";
 
     private static List<List<Artist>> getTopArtists(List<List<Long>> dates) throws Exception {
+        String token = SpotifyAPI.getToken();
         List<List<Artist>> allDatesArtists = new ArrayList<>();
         loadCache();
         for (int i = 0; i < dates.size(); i++) {
@@ -64,12 +65,12 @@ public class LastFmExcel {
                     image = artistImageCache.get(name);
                 } else {
                     try {
-                        image = SpotifyAPI.getArtistImage(name);
+                        image = SpotifyAPI.getArtistImage(name, token);
                         artistImageCache.put(name, image);
                     } catch (JSONException e) {
                         artistImageCache.put(name, null);
                         e.printStackTrace();
-                    } catch (IOException e){
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }

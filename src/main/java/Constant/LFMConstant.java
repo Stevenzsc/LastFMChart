@@ -8,4 +8,8 @@ public class LFMConstant {
     public static final String SPOTIFY_API_TOKEN = "spotify.api.token";
     public static final String USERNAME = "lastfm.username";
     public static final String EXCEL_FILE = "excel.file.name";
+
+    public static final String SPOTIFY_CLIENT_ID = "client.id";
+
+    public static final String SPOTIFY_CLIENT_SECRET = "client.secret";
 }

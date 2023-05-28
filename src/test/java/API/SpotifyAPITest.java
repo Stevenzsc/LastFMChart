@@ -4,14 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class SpotifyAPITest {
     @Test
     void testGetArtistImage() {
         String url = null;
         try {
-            url = SpotifyAPI.getArtistImage("Paramore");
+            String token = SpotifyAPI.getToken();
+            url = SpotifyAPI.getArtistImage("Paramore", token);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
